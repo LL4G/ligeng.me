@@ -1,0 +1,40 @@
+extend ../includes/layout.jade
+
+block content
+    link(rel='stylesheet',href="/stylesheets/blog.css")
+    .container-fluid
+        .row
+            a(href="/articles/write")
+                button.btn.btn-primary(style="margin:10px auto;display:block") 
+                    span.glyphicon.glyphicon-text-width 写文章
+            .col-xs-5.col-xs-offset-2
+                each blog in articles
+                  .blog(style="margin:0px auto 20px;padding:20px")
+                    h2(style="display:inline-block")
+                        a(href="/articles/#{blog._id}",style="text-decoration:none;color:black"): strong #{blog.title}
+                    span(style="float:right") #{blog.pageview}次浏览
+                    p #{blog.summary}
+                    p #{moment(blog.create_at).format('YYYY/MM/DD HH:mm')}
+                    p: a(href="/articles/#{blog._id}") 阅读全文>>
+                    p: a(href="/articles/edit/#{blog._id}") 编辑
+                    hr
+            .col-xs-3
+                .col-xs-12(style="height:500px;background-color:#fff")
+                    h2 Archives
+                .col-xs-12(style="height:500px;background-color:#fff;margin-top:20px;")
+                    h2 标签
+        .page(style="margin:0 auto;text-align:center")
+            nav.test
+              ul.pagination(v-bind:data-totalPage='message')
+                li: a(href="#") &laquo;
+                li: a(href="#") 1
+                li: a(href="#") 2
+                li: a(href="#") &raquo;
+        script(src="/javascripts/vue.js")
+        script.
+            var app = new Vue({
+                el:'.test',
+                data:{
+                    message:11
+                }
+            })

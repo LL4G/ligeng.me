@@ -1,0 +1,10 @@
+body {
+  background-color: #eee; }
+
+.blog {
+  background-color: #fff;
+  border-radius: 4px; }
+
+.page a {
+  margin-left: 10px;
+  margin-right: 10px; }

@@ -1,0 +1,23 @@
+extend ../includes/layout.jade
+
+block content
+    .container-fluid
+        .row
+            .col-xs-6.col-xs-offset-3(style="border:1px #ccc;border-style:none solid")
+                .header(style="text-align:center")
+                    h2 #{article.title}
+                    p 发布于#{article.create_at}#{article.pageview}次浏览
+                #markdown 
+                #content(style="display:none") #{article.content}
+            script(src="//cdn.bootcss.com/marked/0.3.6/marked.js")
+            script(src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js")
+            script.
+                //- document.getElementById('markdown').innerHTML = marked('```\nimport apache.*;\npublic class A{}\n```');
+                hljs.initHighlightingOnLoad();
+                (function(){
+                    marked.setOptions({gfm:true});
+                    document.getElementById('markdown').innerHTML = marked(document.getElementById('content').innerHTML);
+                })()
+                (function(){
+                    console.log("do nothing");
+                })()

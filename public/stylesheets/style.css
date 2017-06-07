@@ -1,0 +1,36 @@
+body {
+  padding: 0px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+footer{
+    background-color: #202020;
+    color:#959595;
+}
+
+footer p{
+    text-align:center;
+    padding:40px;
+ }
+
+ .navbar-header{
+    margin:0 auto;
+ }
+
+ nav > .container-fluid.clearfix{
+    width:50%;
+ }
+
+ .tab-content img{
+    width:200px;
+    height:200px;
+    margin:20px 0;
+ }
+ .col-xs-4{
+    clear:both;
+    margin-bottom: 20px
+ }

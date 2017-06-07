@@ -1,0 +1,13 @@
+.timeline{
+	background-color:#0f0;
+	height:100px;
+	width:4px;
+	position:absolute;
+	display:inline-block;
+}
+
+.text-box .comment { border: 1px solid #eee; display: block; height: 15px; width: 428px; padding: 5px; resize: none; color: #ccc; box-sizing:content-box; overflow:hidden;margin-bottom:5px;}
+.text-box .btn { font-size: 12px; font-weight: bold; display: none; float: right; width: 65px; height: 25px; border: 1px solid #0C528D; color: #fff; background: #4679AC;}
+.text-box .btn-off { border: 1px solid #ccc; color: #ccc; background: #F7F7F7;}
+.text-box .word{ display: none; float: right; margin: 7px 10px 0 0; color: #666;}
+.text-box-on .comment{ height: 50px; color: #333;}

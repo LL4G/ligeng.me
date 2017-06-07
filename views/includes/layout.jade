@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title= title
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+    include ./head
+  body
+    include ./header
+    style.
+        nav.navbar{
+            margin-bottom:0px;
+        }
+        
+    block content
+    include ./footer

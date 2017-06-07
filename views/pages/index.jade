@@ -1,0 +1,90 @@
+extends ../includes/layout
+
+block content
+  .content.container
+    .row
+      .col-sm-6.col-sm-offset-1
+          #myCarousel.carousel.slide.col-xs-12(style="margin-top:10px;")
+            .carousel-indicators
+              li(data-target="myCarousel",data-slide-to="0" class="active")
+              li(data-target="myCarousel",data-slide-to="1")
+            .carousel-inner
+              .item.active
+                img(src="images/293547-106.jpg")
+              .item
+                img(src="images/293547-106.jpg")
+            .carousel-control.left(data-slide="prev" href="#myCarousel") &lsaquo;
+            .carousel-control.right(data-slide="next" href="#myCarousel") &rsaquo;
+          .col-xs-12
+            hr(style="border:;border-top:solid 2px #ccc;")
+            h2 最新文章
+            h2 第一个博客
+            p 发布于现在11010次浏览
+            p 你好
+      .col-sm-4(style="background-color:#9cf;margin-top:10px;")
+        .tweets
+          .tweet(style="height:100px;width:300px;background-color:#fff")
+            hr
+          .tweet(style="height:100px;width:300px;background-color:#fff")
+            hr
+          .tweet(style="height:100px;width:300px;background-color:#fff")
+            hr
+          .tweet(style="height:100px;width:300px;background-color:#fff")
+            hr
+  footer
+  style.
+      body{
+          background-color:#fff;
+      }
+  //- 
+    style.
+      body{margin:0;padding:0}
+      nav{background-color:#eeeeee;display:inline-block;margin:0;padding:0;width:100%;font-size:14px;}
+      ul {list-style:none;margin:0;padding:0}
+      ul li{ display:inline-block;float:left;width:50px;line-height:40px;margin-left:20px}
+      ul li a{display:inline-block;text-decoration:none;line-height:40px;line-height:inherit;height:inherit;}
+      ul li a:hover{text-decoration:none;}
+      .banner{
+        background-image:url(/images/banner.jpg);
+        background-repeat:no-repeat;
+        opacity:0.8;
+        background-size:cover;
+        height:800px;
+      }
+      .banner .inner{
+        text-align:center;
+        max-width:300px;
+        margin:0 auto;
+
+      }
+      body{
+        font-size:0px;
+      }
+      p{
+        font-size:14px;
+      }
+      h1{
+       margin:0;
+       padding:0;
+      }
+      h2{
+       margin:0;
+      }
+      header{
+        background-color:#ccc;
+      }
+      .wrapper{
+        width:30%;
+        margin:0 auto;
+      }
+      .green-section{
+        background-color: #089dB0;
+        margin:0;
+        padding:0;
+        height:500px;
+        text-align:center;
+        color:#fff;
+      }
+      nav .navbar{
+        margin-bottom:0px;
+      }

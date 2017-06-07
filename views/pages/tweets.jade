@@ -1,0 +1,29 @@
+extends ../includes/layout
+
+block content
+    link(rel='stylesheet' href='/stylesheets/tweets.css' type="text/css")
+    .container-fluid(style="background-color:#f5f8fa")
+        #div1(style="display:none")
+            textarea
+        .row(align="center")
+            button.btn.btn-primary(onmouseover="document.getElementById('div1').style.display = 'block';") 发布动态
+        .row
+            //时间轴
+            .timeline.col-xs-offset-3(style="margin-top:20px;")
+            each item in tweets 
+                .col-xs-5.col-xs-offset-4(style="background-color:#fefefe;margin-top:20px;")
+                    .tweet(style="height:300px")
+                        .avatar.col-xs-4(style="width:100px;margin:0px;padding:0px")
+                            img(style="width:100%;margin-top:10px" src="images/123.jpg")
+                        .content.col-xs-8
+                            p #{item.user}
+                            p(style="line-height:100px;float;") #{item.content}
+                    //- 时间
+                    hr
+                    a
+                        span(style="width:50%;text-align:center").glyphicon.glyphicon-thumbs-up 33
+                    a
+                        span(style="width:50%;height:24px;text-align:center;vertical-align:middle;display:inline-block;line-height:24px").glyphicon.glyphicon-comment 42
+                    .text-box
+                        textarea.comment(autocomplete="off") 评论...
+        script(src="/javascripts/vue.js")

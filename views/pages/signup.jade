@@ -1,0 +1,22 @@
+extends ../includes/layout
+
+block content
+    .content(align="center")    
+        form(action="/signup" method="post")
+            .form-group.input-group.input-group-lg(style='margin:10px auto')
+                .col-sm-4
+                    label(for="password1") 用户名&nbsp
+                .col-sm-8
+                    input(type="text" name="username")
+            .form-group.input-group.input-group-lg(style='margin:10px auto')
+                .col-sm-4
+                    label(for="password1") 输入密码&nbsp
+                .col-sm-8
+                    input(type="password" name="password")
+            .form-group.input-group.input-group-lg(style='margin:10px auto')
+                .col-sm-4
+                    label(for="password1") 确认密码&nbsp
+                .col-sm-8    
+                    input(type="password" id="password1"  name="password1")
+            .form-group
+                button(type="submit") 提交

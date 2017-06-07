@@ -1,0 +1,26 @@
+extend ../includes/layout.jade
+
+block content
+    link(rel='stylesheet',href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css")
+    .container(style="display:block;")
+        form(style="height:100%;" action="/articles/write" method="post")
+            textarea#title(name="title" placeholder="文章标题" style="font-size:20px;height:30px;width:100%;resize:none;overflow:hidden" )
+            .form-group.row(style="height:100%;")
+                .col-xs-6(style="height:100%;")
+                    textarea#content.form-control(name="content" style="resize:none;min-height:300px;overflow:hidden" onkeyup="auto_grow(this)")
+                #markdown.col-xs-6(style="height:300px;background-color:#f6f6f6")
+            input.btn.btn-primary(type="submit"  value="提交")
+    script(src="//cdn.bootcss.com/marked/0.3.6/marked.js")
+    script(src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js")
+    script.
+        //- document.getElementById('markdown').innerHTML = marked('```\nimport apache.*;\npublic class A{}\n```');
+        hljs.initHighlightingOnLoad();
+        setInterval(function(){
+            marked.setOptions({gfm:true});
+            document.getElementById('markdown').innerHTML = marked(document.getElementById('content').value);},1000);
+        
+        function auto_grow(element) {
+            element.style.height = "5px";
+            element.style.height = (element.scrollHeight)+"px";
+            document.getElementById('markdown').style.height =(element.scrollHeight)+"px";
+        }

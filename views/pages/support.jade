@@ -1,0 +1,30 @@
+extends ../includes/layout
+
+block content
+    .container-fluid
+        .row
+            .col-xs-8.col-xs-offset-2(style="margin-top:20px;")
+                ul.nav.nav-tabs
+                    li.active: a(href='#tab1' data-toggle="tab") 1元
+                    li: a(href='#tab2' data-toggle="tab") 5元 
+                    li: a(href='#tab3' data-toggle="tab") 15元 
+                    li: a(href='#tab4' data-toggle="tab") 25元 
+                    li: a(href='#tab5' data-toggle="tab") 有钱任性
+                .tab-content
+                    .tab-pane.active#tab1(data-toggle="tab"): img(src='images/1.jpg')
+                    .tab-pane#tab2(data-toggle="tab"): img(src='images/5.jpg')
+                    .tab-pane#tab3(data-toggle="tab"): img(src='images/15.jpg')
+                    .tab-pane#tab4(data-toggle="tab"): img(src='images/25.jpg')
+                    .tab-pane#tab5(data-toggle="tab"): img(src='images/0.jpg')
+                ul.nav.nav-tabs
+                    li.active: a(href='#alipay-tab1' data-toggle="tab") 1元
+                    li: a(href='#alipay-tab2' data-toggle="tab") 5元 
+                    li: a(href='#alipay-tab3' data-toggle="tab") 15元 
+                    li: a(href='#alipay-tab4' data-toggle="tab") 25元 
+                    li: a(href='#alipay-tab5' data-toggle="tab") 有钱任性
+                .tab-content
+                    .tab-pane.active#alipay-tab1(data-toggle="tab"): img(src='images/1.jpg')
+                    .tab-pane#alipay-tab2(data-toggle="tab"): img(src='images/5.jpg')
+                    .tab-pane#alipay-tab3(data-toggle="tab"): img(src='images/15.jpg')
+                    .tab-pane#alipay-tab4(data-toggle="tab"): img(src='images/25.jpg')
+                    .tab-pane#alipay-tab5(data-toggle="tab"): img(src='images/0.jpg')

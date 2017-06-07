@@ -1,0 +1,17 @@
+extends ../includes/layout
+
+prepend content
+  link(rel="stylesheet", href="/stylesheets/signin.css")
+block content
+    .container-fluid(style="height:600px;")
+        .col-md-6(style="width:400px;height:500px;border:1px solid #eee;margin:20px auto;float:none")
+            img(src='/images/logo.png' style="height:80px;margin-top:30px")
+            h3 欢迎登录1lg
+            form#login(action="/signin" method="post")
+                .input-group.input-group-lg(style='margin:10px auto')
+                    input(type="text" name="username" class="form-control" placeholder="用户名" aria-describedby="sizing-addon1")
+                .input-group.input-group-lg(style='margin:10px auto')
+                    input(type="password" name="password" class="form-control" placeholder="密码" aria-describedby="sizing-addon1")
+                .sign-in(style="width:80%;height:30px;margin:0 auto")
+                    button(type="submit" style="height:40px").btn.btn-block.btn-success: a(style="text-decoration:none;color:#fff") 登录
+            

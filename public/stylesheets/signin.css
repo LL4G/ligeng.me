@@ -1,0 +1,14 @@
+.input-group{
+    margin:10px;
+}
+.btn.btn-success{
+    padding:4px 18px;
+    margin:10px;
+}
+.col-md-6{
+    text-align:center;
+    background-color:#fff;
+}
+body{
+    background-color:#f5f8fa;
+}

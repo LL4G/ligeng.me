@@ -1,0 +1,18 @@
+nav.navbar.navbar-inverse(role="navigation")
+  .container-fluid.clearfix
+    .navbar-header
+      a(href="/").navbar-brand 首页
+    div: ul.nav.navbar-nav
+          li: a(href="/articles") 文章
+          li: a(href="/tweets") 动态
+          li.dropdown: a.dropdown-toggle(href="#" data-toggle="dropdown") Demo
+            b.caret
+            ul.dropdown-menu
+              li: a(href="/music_box") 音乐盒
+              li: a(href="/gallery") 相册
+              li: a(href="/echarts") echarts
+          li: a(href="/support") 打赏
+          li(style="position:relative;left:50px"): a(href="/signin")
+                span.glyphicon.glyphicon-log-in 
+                | &nbsp登录 
+          li(style="position:relative;left:50px"): a(href="/signup") 注册
